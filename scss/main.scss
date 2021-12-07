@@ -1,0 +1,32 @@
+@import 'resets';
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.holder {
+    height: 20px;
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.light {
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    &:nth-child(1){
+        background-color: yellow;
+    }
+    &:nth-child(2){
+        background-color: red;
+    }
+    &:nth-child(3){
+        background-color: green;
+    }
+    &:nth-child(4){
+        background-color: pink;
+    }
+}
