@@ -25,9 +25,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -37,21 +36,59 @@ body {
   width: 20px;
   aspect-ratio: 1;
   border-radius: 100%;
+  -webkit-animation: flicker 2s infinite;
+          animation: flicker 2s infinite;
 }
 
 .light:nth-child(1) {
   background-color: yellow;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 }
 
 .light:nth-child(2) {
   background-color: red;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .light:nth-child(3) {
   background-color: green;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
 }
 
 .light:nth-child(4) {
   background-color: pink;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    width: 5px;
+  }
+  50% {
+    width: 20px;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    width: 5px;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    width: 5px;
+  }
+  50% {
+    width: 20px;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
+  100% {
+    width: 5px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
