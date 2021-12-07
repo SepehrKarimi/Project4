@@ -22,46 +22,55 @@ body {
 .holder {
   height: 20px;
   width: 230px;
+  display: -ms-grid;
+  display: grid;
+  gap: 50px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.holder_items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.holder .light1 {
+  background-color: yellow;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.holder .light2 {
+  background-color: red;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.holder .light3 {
+  background-color: green;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.holder .light4 {
+  background-color: pink;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .light {
   width: 20px;
   aspect-ratio: 1;
   border-radius: 100%;
-  -webkit-animation: flicker 2s infinite;
-          animation: flicker 2s infinite;
-}
-
-.light:nth-child(1) {
-  background-color: yellow;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-}
-
-.light:nth-child(2) {
-  background-color: red;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.light:nth-child(3) {
-  background-color: green;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
-}
-
-.light:nth-child(4) {
-  background-color: pink;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: flicker 1s infinite;
+          animation: flicker 1s infinite;
 }
 
 @-webkit-keyframes flicker {
